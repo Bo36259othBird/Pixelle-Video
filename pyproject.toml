@@ -96,4 +96,6 @@ testpaths = ["tests"]
 python_files = ["test_*.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
-addopts = "--cov=pixelle_video --cov-report=term-missing"
+# Removed --cov flags so I can run tests quickly without coverage overhead during local dev.
+# Re-enable with: pytest --cov=pixelle_video --cov-report=term-missing
+addopts = "-v"
