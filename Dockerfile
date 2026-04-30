@@ -25,11 +25,13 @@ RUN if [ "$USE_CN_MIRROR" = "true" ]; then \
 # - libgl1: needed by some OpenCV/video processing dependencies
 # - libglib2.0-0: required by OpenCV at runtime (fixes libgthread-2.0.so.0 not found error)
 # - wget: useful for manually fetching model weights during development
+# - htop: handy for monitoring resource usage inside the container during dev/debugging
 RUN apt-get update && apt-get install -y \
     curl \
     ffmpeg \
     fonts-noto-cjk \
     git \
+    htop \
     libgl1 \
     libglib2.0-0 \
     wget \
